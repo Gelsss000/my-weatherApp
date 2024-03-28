@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weather App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="plugins/bootstrap-5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="plugins/css/style.css" />
+  
+</head>
+<body class="d-flex align-items-center justify-content-center">
+
+<div class="container-fluid d-flex flex-column gap-3 align-items-center justify-content-center h-100 m-4">
+
+  <h1 class="poppins-bold text-light"><img src="plugins/Images/weather-app-logo.png" width="40" height="40" alt=""> Weather App</h1>
+
+  <div class="main-container position-relative w-50 shadow rounded-4 bg-light bg-opacity-75 p-lg-5 p-md-5 p-sm-3">
+    <div class="row"> 
+      <!-- Input Location --> 
+      <div class="col-md-4">
+        <div class="d-flex flex-column gap-2">
+          <div class="input-group flex-nowrap" id="cityInputContainer">
+            <span class="input-group-text"><i class="fa-solid fa-location-dot"></i> </span>
+            <input type="search" class="form-control poppins-light" id="cityName" name="cityName" placeholder="Input City name">
+          </div>
+          <div id="cityNameValidationContainer">
+            <div id="cityNameValidation" class="invalid-feedback mt-0">Please provide a city name.</div>
+          </div>
+          <button class="btn btn-primary shadow poppins-regular" id="btnSearch"><i class="fa-solid fa-magnifying-glass"></i> SEARCH</button>
+          
+
+          <!--<div class="input-group flex-nowrap">
+            <span class="input-group-text"><i class="fa-solid fa-location-dot"></i> </span>
+            <input type="search" class="form-control poppins-light " id="cityName" name="cityName" placeholder="Input City name">
+            <div id="cityNameValidation" class="invalid-feedback d-blo">Please provide a city name.</div>
+          </div>
+          <button class="btn btn-primary shadow poppins-regular" id="btnSearch"><i class="fa-solid fa-magnifying-glass"></i> SEARCH</button>-->
+
+          <!--Search History-->
+          <div class="card mt-4">
+            <div class="card-header d-flex align-items-center poppins-regular"><i class="fa-solid fa-clock-rotate-left"></i>&nbsp; History
+              <button class="btn btn-sm ms-auto" id="btnClearHistory">Clear</button>
+            </div>
+            <div class="card-body">
+              <div class="d-flex flex-row overflow-auto" id="searchHistory-div">
+
+                <div class="d-none align-items-center justify-content-center w-100 mx-auto" id="noSearchSpan">
+                  <span class="text-muted text-center poppins-light">No Search History</span>
+                </div>
+
+                <ul class="list-group list-group-flush w-100" id="history">
+                  <!--<li class="list-group-item text-muted historyTxt">Test</li>
+                  <li class="list-group-item text-muted historyTxt">Test</li>
+                  <li class="list-group-item text-muted historyTxt">Test</li>-->  
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-8 mt-lg-0 mt-md-0 mt-sm-3" id="weather">
+
+        <div class="w-100 h-100 d-flex flex-column gap-2 align-items-center justify-content-center p-5 mx-auto my-auto" id="imgCon">
+          <img src="plugins/Images/404.png" width="250" height="210" alt="">
+          <span class="text-muted poppins-regular fs-5">Search for a City</span>
+        </div>
+
+        <!--LOADER-SPINNER-->
+        <div class="w-100 h-100 d-none align-items-center justify-content-center p-5 mx-auto my-auto" id="loader">
+          <div class="text-primary spinner-border" style="height: 3rem; width: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+       
+      </div>
+
+    </div>  
+  </div>
+</div>
+
+  <script src="plugins/js/jquery v3.7.1.js"></script>
+  <script src= "plugins/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/8033f7faf0.js" crossorigin="anonymous"></script>
+  <script src="myscript.js"></script>
+</body>
+</html>
